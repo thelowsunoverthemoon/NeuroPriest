@@ -1,4 +1,4 @@
-﻿using FMOD;
+using FMOD;
 using Kbg.NppPluginNET.PluginInfrastructure;
 using NeuroPriest.Audio;
 using NeuroPriest.Characters;
