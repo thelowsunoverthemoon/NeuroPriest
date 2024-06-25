@@ -1,6 +1,3 @@
-﻿// Bug : stop twice no textattr and sometimes not load (smushed text)
-// set readonly on menus
-
 using FMOD;
 using Kbg.NppPluginNET.PluginInfrastructure;
 using NeuroPriest.Audio;
