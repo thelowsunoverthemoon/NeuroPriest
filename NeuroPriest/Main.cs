@@ -1,7 +1,4 @@
-﻿// Bug : stop twice no textattr and sometimes not load (smushed text)
-// set readonly on menus
-
-using FMOD;
+﻿using FMOD;
 using Kbg.NppPluginNET.PluginInfrastructure;
 using NeuroPriest.Audio;
 using NeuroPriest.Characters;
@@ -454,12 +451,12 @@ namespace Kbg.NppPluginNET
             {
                 ClosePage();
             }
-            File.Copy(PluginPath + page, PluginPath + "Neuropriest.txt", true);
+            File.Copy(PluginPath + page, PluginPath + "NeuroPriest.txt", true);
             Win32.SendMessage(
                 PluginBase.nppData._nppHandle,
                 (uint)NppMsg.NPPM_DOOPEN,
                 0,
-                PluginPath + "Neuropriest.txt"
+                PluginPath + "NeuroPriest.txt"
             );
         }
 

@@ -139,7 +139,6 @@
     <Compile Include="Game\Game\TurnSynchronizer.cs" />
     <Compile Include="Game\Interactable\Interactable.cs" />
     <Compile Include="Game\Interactable\InterController.cs" />
-    <Compile Include="Game\Interactable\Types\Shrine.cs" />
     <Compile Include="Game\Interactable\Types\Mine.cs" />
     <Compile Include="Game\Map\Map.cs" />
     <Compile Include="Game\Map\Tile.cs" />

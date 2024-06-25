@@ -13,6 +13,7 @@ namespace NeuroPriest.Game
 {
     internal class GameController
     {
+        private const int RENDER_WAIT_TIME = 50;
         private IntPtr InputHook { get; set; }
         private static WinWrapper.HookProc Proc { get; set; }
         private Player Player { get; }
@@ -56,8 +57,6 @@ namespace NeuroPriest.Game
 
         public void Start()
         {
-            // change to thread specific last param
-
             Proc = new WinWrapper.HookProc(InputProc);
 
             InputHook = WinWrapper.SetWindowsHookEx(
@@ -196,14 +195,12 @@ namespace NeuroPriest.Game
 
         private void CheckDoor()
         {
-            //  Debug.WriteLine("NOW AT " + Player.Pos.X + " " + Player.Pos.Y);
             if (
                 LevelData.Doors.ContainsKey(Player.Pos)
                 && (Player.Room != LevelData.Doors[Player.Pos])
             )
             {
                 TurnSynchronizer.Reset();
-                //    Debug.WriteLine("DOOR AT " + Player.Pos.X + " " + Player.Pos.Y);
                 Player.Room = LevelData.Doors[Player.Pos];
             }
         }
@@ -250,7 +247,7 @@ namespace NeuroPriest.Game
             {
                 Player.Status = Player.GameStatus.PLAYER_WIN;
             }
-            WinWrapper.SignalObjectAndWait(RenderNow, RenderFinish, 50, false); // make into constant
+            WinWrapper.SignalObjectAndWait(RenderNow, RenderFinish, RENDER_WAIT_TIME, false); // make into constant
         }
 
         private void KillPlayer()

@@ -38,7 +38,6 @@ I  @  Interfacer, old factory droids
 >  @  War era Observers, Type A
 v  @  War era Observers, Type B
 S  @  Seekers used for counterintelligence
-?  @  Unknown
 ";
 
         public const string INTERACTABLES =
@@ -47,7 +46,7 @@ INTERACTABLES
 
 O  @  Crate. Breakable
 X  @  Heat Vents
-*  @  Containment mine
+=  @  Containment mine
 L  @  Lever. Opens confinement doors
 7  @  Confinement doors
 ";
