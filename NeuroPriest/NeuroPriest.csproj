@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{2BAF29F6-E707-4E43-99B0-D95278B6D3F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeuroPriest</RootNamespace>
+    <AssemblyName>NeuroPriest</AssemblyName>
+    <OutputPath>bin\Debug\</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug-x64</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release-x64</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Default values for debugging so it start correct version of Notepad++
+         $(ProgramW6432) and $(MSBuildProgramFiles32) points to the 64 and 32 bit "Program Files" directories -->
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(Platform)'=='x64'">$(ProgramW6432)\Notepad++\notepad++.exe</StartProgram>
+    <StartProgram Condition="'$(Platform)'=='x86'">$(MSBuildProgramFiles32)\Notepad++\notepad++.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PriorityQueue, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5e136dbf0437dacd, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.5.1.0\lib\net20\PriorityQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\Character\Enemy\Behav\DrAkiyamaBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\ReviveBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\StateBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\VerticalBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\WardenNineBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Types\DrAkiyama.cs" />
+    <Compile Include="Game\Character\Enemy\Types\ObserverTypeB.cs" />
+    <Compile Include="Game\Character\Enemy\Types\ObserverTypeA.cs" />
+    <Compile Include="Game\Character\Enemy\Types\Seeker.cs" />
+    <Compile Include="Game\Character\Enemy\Types\WardenNine.cs" />
+    <Compile Include="Game\Interactable\Types\Door.cs" />
+    <Compile Include="Game\Interactable\Types\HeatVent.cs" />
+    <Compile Include="Game\Interactable\Types\Lever.cs" />
+    <Compile Include="Game\Menus\TextEffects.cs" />
+    <Compile Include="Game\Relic\Modifiers\Types\Devotion.cs" />
+    <Compile Include="Game\Relic\Modifiers\Types\DivineIntervention.cs" />
+    <Compile Include="Game\Relic\Modifiers\Types\Judgement.cs" />
+    <Compile Include="Game\Relic\Modifiers\Types\Wisdom.cs" />
+    <Compile Include="Game\Relic\Relic.cs" />
+    <Compile Include="Game\Relic\Modifiers\Modifier.cs" />
+    <Compile Include="Game\Relic\Modifiers\ModController.cs" />
+    <Compile Include="Game\Relic\RelicController.cs" />
+    <Compile Include="Game\Relic\Types\ArmaChristi\ArmaChristi.cs" />
+    <Compile Include="Game\Relic\Types\ArmaChristi\GoliathClub.cs" />
+    <Compile Include="Game\Relic\Types\ArmaChristi\NailsOfChrist.cs" />
+    <Compile Include="Game\Relic\Types\ArmaChristi\SpearOfLonginus.cs" />
+    <Compile Include="Game\Relic\Types\Blessing\Blessing.cs" />
+    <Compile Include="Game\Relic\Types\Blessing\ArkOfTheCovenant.cs" />
+    <Compile Include="Game\Relic\Types\Blessing\GospelFragment.cs" />
+    <Compile Include="Game\Relic\Types\Blessing\KohensBreastplate.cs" />
+    <Compile Include="Game\Relic\Types\Penance\Tabernacle.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\TrackBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Types\Interfacer.cs" />
+    <Compile Include="Game\Interactable\Types\Crate.cs" />
+    <Compile Include="Game\Map\Graph\Graph.cs" />
+    <Compile Include="Game\Map\Data\LevelData.cs" />
+    <Compile Include="Game\Map\Graph\Node.cs" />
+    <Compile Include="Game\Map\Data\RoomData.cs" />
+    <Compile Include="Game\Menus\Button.cs" />
+    <Compile Include="Game\Menus\Menu.cs" />
+    <Compile Include="Game\Relic\Types\Penance\CrownOfThorns.cs" />
+    <Compile Include="Game\Relic\Types\Penance\Penance.cs" />
+    <Compile Include="Game\Render\Animation\AnimHelpers.cs" />
+    <Compile Include="Game\Render\Style\Style.cs" />
+    <Compile Include="Game\Shared\StaticSprite\StaticInit.cs" />
+    <Compile Include="Game\Shared\Strings\MenuStrings.cs" />
+    <Compile Include="Game\Audio\AudioPlayer.cs" />
+    <Compile Include="Game\Relic\RelicMenu.cs" />
+    <Compile Include="Game\Render\Animation\AnimSynchronizer.cs" />
+    <Compile Include="Game\Render\Animation\AnimSprite.cs" />
+    <Compile Include="Game\Render\Animation\Frame.cs" />
+    <Compile Include="Game\Shared\Style\ColourResource.cs" />
+    <Compile Include="Game\Shared\Style\IndicatorProvider.cs" />
+    <Compile Include="Game\Shared\StaticSprite\StaticInitController.cs" />
+    <Compile Include="Game\Shared\StaticSprite\StaticSprite.cs" />
+    <Compile Include="Game\Relic\Modifiers\Types\BlessedWeapon.cs" />
+    <Compile Include="Game\Relic\Types\Blessing\Eucharist.cs" />
+    <Compile Include="Game\Relic\Types\Penance\GoldenCross.cs" />
+    <Compile Include="Game\Character\Character.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\HorizontalBehav.cs" />
+    <Compile Include="Game\Character\Enemy\Enemy.cs" />
+    <Compile Include="Game\Character\Enemy\Behav\EnemyBehav.cs" />
+    <Compile Include="Game\Character\Enemy\EnemyController.cs" />
+    <Compile Include="Game\Character\Enemy\Types\Android.cs" />
+    <Compile Include="Game\Character\Player.cs" />
+    <Compile Include="Game\Game\TurnSynchronizer.cs" />
+    <Compile Include="Game\Interactable\Interactable.cs" />
+    <Compile Include="Game\Interactable\InterController.cs" />
+    <Compile Include="Game\Interactable\Types\Shrine.cs" />
+    <Compile Include="Game\Interactable\Types\Mine.cs" />
+    <Compile Include="Game\Map\Map.cs" />
+    <Compile Include="Game\Map\Tile.cs" />
+    <Compile Include="Game\Render\Colour\ColourCell.cs" />
+    <Compile Include="Game\Render\Colour\ColourWriter.cs" />
+    <Compile Include="Game\Render\Sprite.cs" />
+    <Compile Include="Game\Shared\Coord.cs" />
+    <Compile Include="Game\Game\GameController.cs" />
+    <Compile Include="Game\Shared\Text\TextAttribute.cs" />
+    <Compile Include="Game\Shared\Text\WindowExtensions.cs" />
+    <Compile Include="Game\Shared\WinWrapper.cs" />
+    <Compile Include="Game\Libs\Fmod\fmod.cs" />
+    <Compile Include="Game\Libs\Fmod\fmod_dsp.cs" />
+    <Compile Include="Game\Libs\Fmod\fmod_errors.cs" />
+    <Compile Include="PluginInfrastructure\ClikeStringArray.cs" />
+    <Compile Include="PluginInfrastructure\DllExport\DllExportAttribute.cs" />
+    <Compile Include="Forms\frmMyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMyDlg.Designer.cs">
+      <DependentUpon>frmMyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfrastructure\Win32.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="PluginInfrastructure\GatewayDomain.cs" />
+    <Compile Include="PluginInfrastructure\NotepadPPGateway.cs" />
+    <Compile Include="PluginInfrastructure\ScintillaGateway.cs" />
+    <Compile Include="PluginInfrastructure\IScintillaGateway.cs" />
+    <Compile Include="PluginInfrastructure\NppPluginNETBase.cs" />
+    <Compile Include="PluginInfrastructure\NppPluginNETHelper.cs" />
+    <Compile Include="PluginInfrastructure\Docking_h.cs" />
+    <Compile Include="PluginInfrastructure\MenuCmdID_h.cs" />
+    <Compile Include="PluginInfrastructure\Scintilla_iface.cs" />
+    <Compile Include="PluginInfrastructure\Msgs_h.cs" />
+    <Compile Include="PluginInfrastructure\Preference_h.cs" />
+    <Compile Include="PluginInfrastructure\Resource_h.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfrastructure\UnmanagedExports.cs" />
+    <Compile Include="Game\Render\Renderer.cs" />
+    <Compile Include="Game\Render\Style\StyleProvider.cs" />
+    <Compile Include="Game\Render\TextWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmMyDlg.resx">
+      <DependentUpon>frmMyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\PluginInfrastructure\DllExport\NppPlugin.DllExport.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
