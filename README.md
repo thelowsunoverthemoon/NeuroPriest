@@ -6,7 +6,7 @@
 </p>
 
 ## Warning
-Play at your own risk (losing data, settings, ect). 64 bit Windows only. Tested on Windows 10 and 11.
+Play at your own risk (losing data, settings, ect). 64 bit Windows only. Tested on Windows 10 and 11 on Notepad version 8.6.8.
 
 ## How to Install
 
