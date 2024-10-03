@@ -19,7 +19,6 @@ namespace NeuroPriest.Shared
 
         public delegate IntPtr HookProc(int code, IntPtr wParam, IntPtr lParam);
 
-        // investiage setlasterror meaning?
         [DllImport("user32.dll", SetLastError = true)]
         public static extern IntPtr SetWindowsHookEx(
             int hookType,
